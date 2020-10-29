@@ -31,6 +31,7 @@ Full Stack Python 2020
 
 .navbar a {
     font-weight: bold;
+    
 }
 
 .navbar-dark {
@@ -71,4 +72,17 @@ textarea {
 
 .footer p {
     display: inline;
+}
+/* barra de nav*/
+
+.login {
+    list-style-type: none;
+    float: left;
+}
+ul {
+    list-style-type: none;
+}
+.form-group {
+    margin: 1em;
+   
 }

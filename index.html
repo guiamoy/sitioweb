@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="es">
   <head>
-    <title>Awakelab Full Stack Python</title>
+    <title>ControlMed</title>
     <meta charset="utf-8">
     <meta name="viewport" 
         content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -17,8 +17,8 @@
   </head>
   <body>
     <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-      <a class="navbar-brand" href="#">Awakelab</a>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <a class="navbar-brand" href="#">ControlMed</a>
 
       <!-- Navigation Bar Hamburger-->
       <button
@@ -38,15 +38,15 @@
             <li class="nav-item">
               <a
                 class="nav-link scroll-trigger" 
-                href="#principal">
-                  Sistema Medico
+                href="../sitioweb/Beneficios.html">
+                  Beneficios
               </a>
             </li>
             <li class="nav-item">
               <a 
                 class="nav-link scroll-trigger" 
-                href="#competencias">
-                  Competencias
+                href="../sitioweb/Noticias.html">
+                  Noticias
               </a>
             </li>
             <li class="nav-item">
@@ -80,34 +80,40 @@
                   aria-expanded="false">
                       Perfil <span class="caret"></span>
               </a>
-              <div class="dropdown-menu dropdown-menu-right">
-                  <a 
-                    class="dropdown-item scroll-trigger"
-                    href="#"
-                    data-toggle="modal"
-                    data-target="#profile-modal">
-                      Perfil
-                  </a>
-                  <a class="dropdown-item scroll-trigger"
-                    data-toggle="modal"
-                    data-target="#settings-modal">
-                        Configuración
-                  </a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item scroll-trigger" href="">
-                      Logout
-                  </a>
+              <div class="dropdown-menu">
+                <form class="px-4 py-3">
+                  <div class="form-group">
+                    <label for="exampleDropdownFormEmail1">Correo Electrónico</label>
+                    <input type="email" class="form-control" id="exampleDropdownFormEmail1" placeholder="email@ejemplo.com">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleDropdownFormPassword1">Contraseña</label>
+                    <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="Contraseña">
+                  </div>
+                  <div class="form-group">
+                    <div class="form-check">
+                      <input type="checkbox" class="form-check-input" id="dropdownCheck">
+                      <label class="form-check-label" for="dropdownCheck">
+                        Recuerdame
+                      </label>
+                    </div>
+                  </div>
+                  <button type="submit" class="btn btn-primary">Ingresar</button>
+                </form>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Regístrese</a>
+                <a class="dropdown-item" href="#">¿Olvidó la contraseña?</a>
               </div>
             </li>
-         </ul>
-         <!--<form class="form-inline my-2 my-lg-0">
+          </ul>
+         <form class="form-inline my-2 my-lg-0">
            <input class="form-control mr-sm-2" 
               type="text"
-              placeholder="Search" 
+              placeholder="Busqueda" 
               aria-label="Search">
            <button class="btn btn-outline-success border-dark 
                     font-weight-bold text-white my-2 my-sm-0"
-                    type="submit">Search</button>
+                    type="submit">Búsqueda</button>
          </form>-->
       </div>
       <!-- Navigation Links -->

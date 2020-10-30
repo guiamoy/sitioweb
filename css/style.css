@@ -84,5 +84,29 @@ ul {
 }
 .form-group {
     margin: 1em;
-   
+}
+/* beneficios*/
+#titulo {
+    color: aliceblue;
+    padding: 5px;
+}
+.card-title {
+    float: left;
+    padding: 10px;
+}
+.card-text {
+    text-align: justify;
+}
+/* enlaces*/
+#minilogo {
+    float: left;
+    padding: 5px;
+}
+#enlaces {
+    vertical-align: middle;
+}
+/* registro*/
+#registrese {
+    padding: 10px;
+    text-align: center;
 }

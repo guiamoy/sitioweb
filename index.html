@@ -80,58 +80,40 @@
                   aria-expanded="false">
                       Perfil <span class="caret"></span>
               </a>
-              <div class="dropdown-menu dropdown-menu-right">
-                  <a 
-                    class="dropdown-item scroll-trigger"
-                    href="#"
-                    data-toggle="modal"
-                    data-target="#profile-modal">
-                      Perfil
-                  </a>
-                  <a class="dropdown-item scroll-trigger"
-                    data-toggle="modal"
-                    data-target="#settings-modal">
-                        Configuración
-                  </a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item scroll-trigger" href="">
-                      Logout
-                  </a>
+              <div class="dropdown-menu">
+                <form class="px-4 py-3">
+                  <div class="form-group">
+                    <label for="exampleDropdownFormEmail1">Correo Electrónico</label>
+                    <input type="email" class="form-control" id="exampleDropdownFormEmail1" placeholder="email@ejemplo.com">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleDropdownFormPassword1">Contraseña</label>
+                    <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="Contraseña">
+                  </div>
+                  <div class="form-group">
+                    <div class="form-check">
+                      <input type="checkbox" class="form-check-input" id="dropdownCheck">
+                      <label class="form-check-label" for="dropdownCheck">
+                        Recuerdame
+                      </label>
+                    </div>
+                  </div>
+                  <button type="submit" class="btn btn-primary">Ingresar</button>
+                </form>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Regístrese</a>
+                <a class="dropdown-item" href="#">¿Olvidó la contraseña?</a>
               </div>
             </li>
-            </ul>
-            <ul class="login">
-            <li>
-              <form>
-              <div class="form-group">
-                <!--<label for="exampleInputEmail1">Correo Electronico</label>-->
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                placeholder="Correo Electronico"
-                aria-label="Correo Electronico">
-              </form>
-            </li>
-              <form>
-              <li class="form-group">
-                <!--<label for="exampleInputPassword1">Contraseña</label>-->
-                <input type="password" class="form-control" id="exampleInputPassword1"
-                placeholder="Contraseña"
-                aria-label="Contraseña">
-              </form>
-            </li>
-            <li>
-              </div>
-              <button type="submit" class="btn btn-primary">Ingresar</button>
-          </li>
-         </ul>
-         
-         <!--<form class="form-inline my-2 my-lg-0">
+          </ul>
+         <form class="form-inline my-2 my-lg-0">
            <input class="form-control mr-sm-2" 
               type="text"
-              placeholder="Search" 
+              placeholder="Busqueda" 
               aria-label="Search">
            <button class="btn btn-outline-success border-dark 
                     font-weight-bold text-white my-2 my-sm-0"
-                    type="submit">Search</button>
+                    type="submit">Búsqueda</button>
          </form>-->
       </div>
       <!-- Navigation Links -->

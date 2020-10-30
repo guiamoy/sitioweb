@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    
+    body>
+    <input type="text" name="name[]" id="TextId">
+    <input type="text" name="name[]" id="TextName">
+    <input type="text" name="name[]" id="TextSurname">
+    <input type="text" name="name[]" id="TextAge">
+    <input type="button" value="Insert" onclick="InsertIntoTable()">
+    </br>
+    <table>
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Name</th>
+          <th>Surname</th>
+          <th>Age</th>
+         </tr>
+       </thead>
+       <tbody id="TableBody">
+       </tbody>
+     </table>
+  
+
+
+
+<script>
+var names=document.getElementsByName('name[]');
+
+function InsertIntoTable()
+{
+  var TableRow="<tr></tr>";
+	for(key=0; key < names.length; key++)
+    TableRow = TableRow.substring(0,TableRow.length-5) + "<td>" + names[key].value + "</td>" + TableRow.substring(TableRow.length-5);
+
+  var TrElement = document.createElement("tr");
+	TrElement.innerHTML = TableRow;
+	document.getElementById("TableBody").appendChild(TrElement);
+}
+
+
+    </script>
+</body>
+</html>

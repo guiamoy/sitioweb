@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <title>ControlMed ::: Examen triglicéridos  :::</title>
+    <meta charset="utf-8">
+    <meta name="viewport" 
+        content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Loading Bootstrap CSS -->
+    <link 
+      rel="stylesheet" 
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" 
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" 
+      crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Poiret+One" 
+        rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/style.css">
+       
+      
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <a class="navbar-brand" href="#">ControlMed</a>
+    <!-- End Navigation Bar -->
+
+      <!-- Navigation Bar Hamburger-->
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navigation"
+        aria-expanded="false"
+        aria-controls="navigation" 
+        aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- End Navigation Bar Hamburger -->
+      <!-- Navigation Links -->
+      <div class="collapse navbar-collapse" id="navigation">
+         <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a
+                class="nav-link scroll-trigger" 
+                href="../sitioweb/Beneficios.html">
+                  Beneficios
+              </a>
+            </li>
+            <li class="nav-item">
+              <a 
+                class="nav-link scroll-trigger" 
+                href="../sitioweb/Noticias.html">
+                  Noticias
+              </a>
+            </li>
+            <li class="nav-item">
+              <a 
+                class="nav-link scroll-trigger" 
+                href="#equipo">
+                  Equipo
+              </a>
+            </li>
+            <li class="nav-item">
+              <a 
+                class="nav-link scroll-trigger" 
+                href="#enlaces"> 
+                  Enlaces
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link scroll-trigger" 
+                href="#contacto">
+                  Contacto
+              </a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                  href="#"
+                  class="nav-link dropdown-toggle"
+                  data-toggle="dropdown"
+                  role="button"
+                  aria-haspopup="true"
+                  aria-expanded="false">
+                      Perfil <span class="caret"></span>
+              </a>
+              <div class="dropdown-menu">
+                <form class="px-4 py-3">
+                  <div class="form-group">
+                    <label for="exampleDropdownFormEmail1">Correo Electrónico</label>
+                    <input type="email" class="form-control" id="exampleDropdownFormEmail1" placeholder="email@ejemplo.com">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleDropdownFormPassword1">Contraseña</label>
+                    <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="Contraseña">
+                  </div>
+                  <div class="form-group">
+                    <div class="form-check">
+                      <input type="checkbox" class="form-check-input" id="dropdownCheck">
+                      <label class="form-check-label" for="dropdownCheck">
+                        Recuerdame
+                      </label>
+                    </div>
+                  </div>
+                  <button type="submit" class="btn btn-primary">Ingresar</button>
+                </form>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Regístrese</a>
+                <a class="dropdown-item" href="#">¿Olvidó la contraseña?</a>
+              </div>
+            </li>
+          </ul>
+         <form class="form-inline my-2 my-lg-0">
+           <input class="form-control mr-sm-2" 
+              type="text"
+              placeholder="Busqueda" 
+              aria-label="Search">
+           <button class="btn btn-outline-success border-dark 
+                    font-weight-bold text-white my-2 my-sm-0"
+                    type="submit">Búsqueda</button>
+         </form>-->
+      </div>
+      <!-- Navigation Links -->
+    </nav>
+    <!-- End Navigation Bar -->
+
+    <!-- Section: Principal -->
+    <div class="container-fluid bg-principal" id="principal">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="jumbotron jumbotron-main">
+            <h2>Calendario </h2>
+            <h3>Fechas Citas y Examenes</h3>
+            <table id="calendar">
+                <caption></caption>
+                <thead>
+                    <tr>
+                        <th>Lun</th><th>Mar</th><th>Mie</th><th>Jue</th><th>Vie</th><th>Sab</th><th>Dom</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+<!-- End Section: Principal -->
+
+<script>
+var actual=new Date();
+function mostrarCalendario(year,month)
+{
+    var now=new Date(year,month-1,1);
+    var last=new Date(year,month,0);
+    var primerDiaSemana=(now.getDay()==0)?7:now.getDay();
+    var ultimoDiaMes=last.getDate();
+    var dia=0;
+    var resultado="<tr bgcolor='silver'>";
+    var diaActual=0;
+    console.log(ultimoDiaMes);
+ 
+    var last_cell=primerDiaSemana+ultimoDiaMes;
+ 
+    // hacemos un bucle hasta 42, que es el máximo de valores que puede
+    // haber... 6 columnas de 7 dias
+    for(var i=1;i<=42;i++)
+    {
+        if(i==primerDiaSemana)
+        {
+            // determinamos en que dia empieza
+            dia=1;
+        }
+        if(i<primerDiaSemana || i>=last_cell)
+        {
+            // celda vacia
+            resultado+="<td>&nbsp;</td>";
+        }else{
+            // mostramos el dia
+            if(dia==actual.getDate() && month==actual.getMonth()+1 && year==actual.getFullYear())
+                resultado+="<td class='hoy'>"+dia+"</td>";
+            else
+                resultado+="<td>"+dia+"</td>";
+            dia++;
+        }
+        if(i%7==0)
+        {
+            if(dia>ultimoDiaMes)
+                break;
+            resultado+="</tr><tr>\n";
+        }
+    }
+    resultado+="</tr>";
+ 
+    var meses=Array("Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre");
+ 
+    // Calculamos el siguiente mes y año
+    nextMonth=month+1;
+    nextYear=year;
+    if(month+1>12)
+    {
+        nextMonth=1;
+        nextYear=year+1;
+    }
+ 
+    // Calculamos el anterior mes y año
+    prevMonth=month-1;
+    prevYear=year;
+    if(month-1<1)
+    {
+        prevMonth=12;
+        prevYear=year-1;
+    }
+ 
+    document.getElementById("calendar").getElementsByTagName("caption")[0].innerHTML="<div>"+meses[month-1]+" / "+year+"</div><div><a onclick='mostrarCalendario("+prevYear+","+prevMonth+")'>&lt;</a> <a onclick='mostrarCalendario("+nextYear+","+nextMonth+")'>&gt;</a></div>";
+    document.getElementById("calendar").getElementsByTagName("tbody")[0].innerHTML=resultado;
+}
+ 
+mostrarCalendario(actual.getFullYear(),actual.getMonth()+1);gi
+
+</script>
+
+ 
+
+
+
+   
+
+    <!-- jQuery, Popper.js, Bootstrap JS -->
+    <script 
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js" 
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" 
+      crossorigin="anonymous">
+    </script>
+    <script 
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" 
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" 
+      crossorigin="anonymous">
+    </script>
+    <script 
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" 
+      crossorigin="anonymous">
+    </script>
+    <script>
+      var ctx= document.getElementById("myLineChart").getContext("2d");
+      var myChart= new Chart(ctx,{
+          type:"line",
+          data:{
+              labels:['25/05','27/06','30/08'],
+              datasets:[{
+                      label:'Examen Trigliceridos',
+                      data:[10,9,15],
+                      backgroundColor:[
+                          'rgb(66, 134, 244,0.5)',
+                          'rgb(74, 135, 72,0.5)',
+                          'rgb(229, 89, 50,0.5)'
+                      ]
+              }]
+          },
+          options:{
+              scales:{
+                  yAxes:[{
+                          ticks:{
+                              beginAtZero:true
+                          }
+                  }]
+              }
+          }
+      });
+  </script>
+  </body>
+</html>

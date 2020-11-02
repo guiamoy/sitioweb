@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="es">
   <head>
-    <title>ControlMed</title>
+    <title>ControlMed ::: Examen triglicéridos  :::</title>
     <meta charset="utf-8">
     <meta name="viewport" 
         content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -14,11 +14,14 @@
     <link href="https://fonts.googleapis.com/css?family=Poiret+One" 
         rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="css/style.css">
+        <!-- Iniciando Charts javascripts -->
+        <script     src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">     </script>
   </head>
   <body>
     <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg navbar-dark">
       <a class="navbar-brand" href="#">ControlMed</a>
+    <!-- End Navigation Bar -->
 
       <!-- Navigation Bar Hamburger-->
       <button
@@ -125,313 +128,26 @@
       <div class="row">
         <div class="col-sm-12">
           <div class="jumbotron jumbotron-main">
-            <h2>Grupo Full Stack Python</h2>
-            <h3>Awakelab</h3>
+            <h2>Examen triglicéridos </h2>
+            <h3>Resultados Paciente</h3>
+           <P>Información del Examen</P>
           </div>
         </div>
       </div>
     </div>
-    <!-- End Section: Principal -->
+<!-- End Section: Principal -->
+<!-- Section: Charts -->
+    <div class="container-fluid" id="charts">
+      <div class="row">
+        <div class="col-sm-12">
+                               <canvas id="myLineChart" width="400" height="400"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+    
 
-    <!-- Section: Competencias -->
-    <div class="container-fluid bg-dark" id="competencias">
-      <div class="row">
-        <h3>Nuestras Competencias</h3>
-      </div>
-      <div class="row">
-        <div class="col-md-6 col-lg-3">
-          <div class="card">
-            <h3 class="card-header">Paciente 1</h3>
-            <div class="card-body">
-              <h4 class="card-title">Ultimos Datos</h4>
-              <p class="card-text">Hospitalización semana pasada</p>
-              <a href="#!" class="btn btn-dark">Ver mas</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-3">
-          <div class="card">
-            <h3 class="card-header">Paciente  2</h3>
-            <div class="card-body">
-              <h4 class="card-title">Ultimos Datos</h4>
-              <p class="card-text">Descripción de la competencia del 
-                grupo Full Stack Python de Awakelab.</p>
-              <a href="#!" class="btn btn-dark">Ver mas</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-3">
-          <div class="card">
-            <h3 class="card-header">Competencia 3</h3>
-            <div class="card-body">
-              <h4 class="card-title">Subtítitulo competencia</h4>
-              <p class="card-text">Descripción de la competencia del 
-                grupo Full Stack Python de Awakelab.</p>
-              <a href="#!" class="btn btn-dark">Ver mas</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-3">
-          <div class="card">
-            <h3 class="card-header">Competencia 4</h3>
-            <div class="card-body">
-              <h4 class="card-title">Subtítitulo competencia</h4>
-              <p class="card-text">Descripción de la competencia del 
-                grupo Full Stack Python de Awakelab.</p>
-              <a href="#!" class="btn btn-dark">Ver mas</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-4">
-          <div class="card">
-            <h3 class="card-header">Competencia 5</h3>
-            <div class="card-body">
-              <h4 class="card-title">Subtítitulo competencia</h4>
-              <p class="card-text">Descripción de la competencia del 
-                grupo Full Stack Python de Awakelab.</p>
-              <a href="#!" class="btn btn-dark">Ver mas</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card">
-            <h3 class="card-header">Competencia 6</h3>
-            <div class="card-body">
-              <h4 class="card-title">Subtítitulo competencia</h4>
-              <p class="card-text">Descripción de la competencia del 
-                grupo Full Stack Python de Awakelab.</p>
-              <a href="#!" class="btn btn-dark">Ver mas</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card">
-            <h3 class="card-header">Competencia 7</h3>
-            <div class="card-body">
-              <h4 class="card-title">Subtítitulo competencia</h4>
-              <p class="card-text">Descripción de la competencia del 
-                grupo Full Stack Python de Awakelab.</p>
-              <a href="#!" class="btn btn-dark">Ver mas</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- End Section: Competencias -->
-
-    <!-- Section: Equipo -->
-    <div class="container-fluid bg-light" id="equipo">
-      <div class="row">
-        <h3>Nuestro Equipo</h3>
-      </div>
-      <div class="row">
-        <div id="team-carousel" 
-            class="carousel slide" 
-            data-ride="carousel" 
-            data-interval="3000">
-          <div class="carousel-inner" style="padding: 4rem;" role="listbox">
-            <div style="height: 400px" class="carousel-item active">
-              <img class="d-block img-fluid carousel-img" src="img/group1.jpg">
-              <div class="carousel-caption">
-                Grupo Front End
-              </div>
-            </div>
-            <div style="height: 400px" class="carousel-item">
-              <img class="d-block img-fluid carousel-img" src="img/group2.jpg">
-              <div class="carousel-caption">
-                Grupo Back End
-              </div>
-            </div>
-            <div style="height: 400px" class="carousel-item">
-              <img class="d-block img-fluid carousel-img" src="img/group3.jpg">
-              <div class="carousel-caption">
-                Grupo DevOps
-              </div>
-            </div>
-          </div>
-          <a class="left carousel-control" 
-              href="#team-carousel" 
-              role="button" 
-              data-slide="prev">
-            <span class="icon-prev" aria-hidden="true"></span>
-          </a>
-          <a class="right carousel-control" 
-              href="#team-carousel" 
-              role="button" 
-              data-slide="next">
-            <span class="icon-next" aria-hidden="true"></span>
-          </a>
-          <ol class="carousel-indicators">
-            <li data-target="#team-carousel" 
-                data-slide-to="0" 
-                class="active"></li>
-            <li data-target="#team-carousel" 
-                data-slide-to="1"></li>
-            <li data-target="#team-carousel" 
-                data-slide-to="2"></li>
-          </ol>
-        </div>
-      </div>
-    </div>
-    <!-- End Section: Equipo -->
-
-    <!-- Section: Enlaces -->
-    <div class="container-fluid bg-dark" id="enlaces">
-      <div class="row">
-          <h3>Enlaces de Interés</h3>
-      </div>
-      <div class="row">
-        <div class="col-md-6">
-          <div class="media">
-            <img class="d-flex mr-3" src="img/flag-64.png" 
-                alt="Generic placeholder image">
-            <div class="media-body">
-              <h5 class="mt-0">Enlaces Tipo 1</h5>
-              <ul>
-                <li>Enlace de interés del grupo <a href="#">Ver más</a></li>
-                <li>Enlace de interés del grupo <a href="#">Ver más</a></li>
-                <li>Enlace de interés del grupo <a href="#">Ver más</a></li>
-                <li>Enlace de interés del grupo <a href="#">Ver más</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="media">
-            <img class="d-flex mr-3" src="img/world-64.png" 
-                alt="Generic placeholder image">
-            <div class="media-body">
-              <h5 class="mt-0">Enlaces Tipo 2</h5>
-              <ul>
-                <li>Enlace de interés del grupo <a href="#">Ver más</a></li>
-                <li>Enlace de interés del grupo <a href="#">Ver más</a></li>
-                <li>Enlace de interés del grupo <a href="#">Ver más</a></li>
-                <li>Enlace de interés del grupo <a href="#">Ver más</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-6">
-          <div class="media">
-            <img class="d-flex mr-3" src="img/screen-64.png" 
-                alt="Generic placeholder image">
-            <div class="media-body">
-              <h5 class="mt-0">Enlaces Tipo 3</h5>
-              <ul>
-                <li>Enlace de interés del grupo <a href="#">Ver más</a></li>
-                <li>Enlace de interés del grupo <a href="#">Ver más</a></li>
-                <li>Enlace de interés del grupo <a href="#">Ver más</a></li>
-                <li>Enlace de interés del grupo <a href="#">Ver más</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="media">
-            <img class="d-flex mr-3" src="img/gear-64.png" 
-                alt="Generic placeholder image">
-            <div class="media-body">
-              <h5 class="mt-0">Enlaces Tipo 4</h5>
-              <ul>
-                <li>Enlace de interés del grupo <a href="#">Ver más</a></li>
-                <li>Enlace de interés del grupo <a href="#">Ver más</a></li>
-                <li>Enlace de interés del grupo <a href="#">Ver más</a></li>
-                <li>Enlace de interés del grupo <a href="#">Ver más</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- End Section: Enlaces -->
-
-    <!-- Section: Contacto -->
-    <div class="container-fluid bg-light" id="contacto">
-      <div class="row">
-        <h2>Contáctanos</h2>
-      </div>
-      <div class="row justify-content-center align-items-center h-100">
-        <div class="col-sm-6" id="contact-form">
-          <form>
-            <div class="form-group">
-              <label for="contact-name">Nombre</label>
-              <input type="text" class="form-control" id="contact-name" 
-                  placeholder="Tu Nombre">
-            </div>
-            <div class="form-group">
-              <label for="contact-email">Email</label>
-              <input type="email" class="form-control" id="contact-email" 
-                  placeholder="Tu Email">
-            </div>
-            <div class="form-group">
-              <label for="contact-msg">Email</label>
-              <textarea class="form-control" id="contact-msg" 
-                  placeholder="Tu Mensaje" rows="4"></textarea>
-            </div>
-            <div class="btn-group">
-              <button type="button" class="btn btn-outline-secondary">Enviar</button>
-              <button type="button" class="btn btn-outline-secondary">Limpiar</button>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-    <!-- End Section: Contacto -->
-
-    <footer class="footer bg-dark text-center">
-      <p class="text-muted">&copy; 2020 Awakelab.</p>
-      <p class="text-muted">Grupo Full Stack Python</p>
-    </footer>
-
-    <!-- MODAL FORMS -->
-    <div class="modal" id="profile-modal" role="dialog">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal"
-              aria-label="Close"><span aria-hidden="true">&times;</span>
-            </button>
-            <p class="modal-title" id="profile-modal-label">Perfil</p>
-          </div>
-            <div class="modal-body">
-              Perfil
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-success">Guardar</button>
-              <button type="button" 
-                  class="btn btn-secondary" 
-                  data-dismiss="modal">Cancelar</button>
-            </div>
-        </div>
-     </div>
-    </div>
-    <div class="modal" id="settings-modal" role="dialog">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" 
-              aria-label="Close"><span aria-hidden="true">&times;</span>
-            </button>
-            <p class="modal-title" id="settings-modal-label">Configuración</p>
-          </div>
-          <div class="modal-body">
-            Configuración
-          </div>
-          <div class="modal-footer">
-            <button type="button" 
-                class="btn btn-success">Guardar</button>
-            <button type="button" 
-                class="btn btn-secondary" 
-                data-dismiss="modal">Cancelar</button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- END MODAL FORMS -->
+   
 
     <!-- jQuery, Popper.js, Bootstrap JS -->
     <script 
@@ -449,5 +165,32 @@
       integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" 
       crossorigin="anonymous">
     </script>
+    <script>
+      var ctx= document.getElementById("myLineChart").getContext("2d");
+      var myChart= new Chart(ctx,{
+          type:"line",
+          data:{
+              labels:['25/05','27/06','30/08'],
+              datasets:[{
+                      label:'Examen Trigliceridos',
+                      data:[10,9,15],
+                      backgroundColor:[
+                          'rgb(66, 134, 244,0.5)',
+                          'rgb(74, 135, 72,0.5)',
+                          'rgb(229, 89, 50,0.5)'
+                      ]
+              }]
+          },
+          options:{
+              scales:{
+                  yAxes:[{
+                          ticks:{
+                              beginAtZero:true
+                          }
+                  }]
+              }
+          }
+      });
+  </script>
   </body>
 </html>

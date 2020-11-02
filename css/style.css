@@ -2,7 +2,10 @@
 Awakelab
 Full Stack Python 2020
 */
- 
+#competencias {
+    background-color: aquamarine;
+}
+
 #competencias, 
 #contacto {
     padding-top: 60px;
@@ -45,6 +48,12 @@ h1, h2, h3, h4, h5, h6, .navbar, .modal {
 .bg-principal {
     background-image: url('../img/fondo_medicina.jpg');
     background-size: cover;
+    background-position: center;
+}
+
+.charts  {
+    background-color:black;
+ 
 }
 
 .jumbotron {
